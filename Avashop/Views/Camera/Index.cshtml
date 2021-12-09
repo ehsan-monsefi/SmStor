@@ -1,0 +1,230 @@
+﻿@model PageList<Camera>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-12 kol">
+    <div class="row">
+        <div class="col-9">
+            <ul class="breadcrumb bg-light">
+                <li class="breadcrumb-item"><a href="~/Home/Index"> AVASHOP</a></li>
+                <li class="breadcrumb-item"><a href="~/Products/Index"> Products</a></li>
+                <li class="breadcrumb-item"><a href="~/Camera/Index"> Camera</a></li>
+            </ul>
+            <div class="row">
+                <div class="col-12 b">
+                    <i class='fas fa-align-left'> Sorted By :</i>
+                    <a href="#" class="btn btn-secondary btn-sm">Most Visited</a>
+                    <a href="#" class="btn btn-light btn-sm">Best Selling</a>
+                    <a href="#" class="btn btn-light btn-sm">Most Popular</a>
+                    <a href="#" class="btn btn-light btn-sm">The Newest</a>
+                    <a href="#" class="btn btn-light btn-sm">Cheapest</a>
+                    <a href="#" class="btn btn-light btn-sm">Most Expensive</a>
+                </div>
+            </div>
+            <div class="row">
+                @foreach (var Camera in Model.Data)
+                {
+                    <div class="col-4 card crd">
+                        <img src="~/@Camera.CamerapMedia[0].CameraPicPath" />
+                        <div class="card-body bg-white">
+                            <h3>@Camera.CameraName</h3>
+                            <hr />
+                            <h6>@Camera.CameraPrice $</h6>
+                            <p>@Camera.CameraDescription</p>
+                            <p>@Camera.CameraInsertTime</p>
+                            <a href="#" class="btn btn-outline-dark">See Profile</a>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="row">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item"><a class="page-link" href="#">6</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="row">
+                <div class="col-12 cat">
+                    <img src="../Img/32.jpg" />
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-12 cat1">
+                    <h3>Search Results</h3>
+                    <hr />
+                    <form action="~/Camera/Index" method="post">
+                        <input class="form-control mr-sm-2" type="text" name="q" placeholder="Enter Your Laptop Name">
+                    </form>                    
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-12 cat5">
+                    <img src="../Img/41.jpg" />
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-12 cat2L">
+                    <h3>Brand</h3>
+                    <hr />
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search For A Brand Name">
+                    <div class="form-check cat2a">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="">Canon
+                        </label>
+                    </div>
+                    <div class="form-check cat2a">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="">Nikon
+                        </label>
+                    </div>
+                    <div class="form-check cat2a">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="">Fujifilm
+                        </label>
+                    </div>
+                    <div class="form-check cat2a">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="">Lumix
+                        </label>
+                    </div>
+                    <div class="form-check cat2a">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="">Panasonic
+                        </label>
+                    </div>
+                    <div class="form-check cat2a">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="">Sony
+                        </label>
+                    </div>
+                    <div class="form-check cat2a">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="">Toshiba
+                        </label>
+                    </div>
+                    <div class="form-check cat2a">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="">Instax
+                        </label>
+                    </div>
+                    <div class="form-check cat2a">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="">Brinno
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-12 cat4L">
+                    <form action="/action_page.php">
+                        <div class="form-group">
+                            <select class="form-control" id="sel1" name="sellist1">
+                                <option>Memory Card Support</option>
+                                <option>Micro SD</option>
+                                <option>No Memory Card Support</option>
+                                <option>Memory StickMicro-M2</option>
+                                <option>Nano Memory </option>
+                                <option>Mini SD</option>
+                                <option>SD</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" id="sel1" name="sellist1">
+                                <option>The Amount Of Ram</option>
+                                <option>1 Gig</option>
+                                <option>4 Gig</option>
+                                <option>8 Gig</option>
+                                <option>2 Gig</option>
+                                <option>16 Gig</option>
+                                <option>32 Gig</option>
+                                <option>64 Gig</option>
+                                <option>128 Gig</option>
+                                <option>256 Gig</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" id="sel1" name="sellist1">
+                                <option>Colors</option>
+                                <option>Black</option>
+                                <option>Silver</option>
+                                <option>Blue</option>
+                                <option>Gray</option>
+                                <option>Red</option>
+                                <option>Yellow</option>
+                                <option>Green</option>
+                                <option>Gold</option>
+                                <option>Purple</option>
+                                <option>White</option>
+                                <option>Orange</option>
+                                <option>Bronze</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-outline-light">Apply Filter</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="hm3">
+    <h1>Special Product</h1>
+    <hr />
+    <div class="prsss">
+        <meta charset="utf-8" />
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+        <link rel="stylesheet"
+              href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    @foreach (var Camera in Model.Data)
+                    {
+                        <div class="swiper-slide">
+                            <img src="~/@Camera.CamerapMedia[0].CameraPicPath" />
+                            <div class="card-img-overlay ssss">
+                                <h4 class="card-title">@Camera.CameraName</h4>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <p class="card-text">@Camera.CameraDescription</p>
+                                <h6 class="card-text">@Camera.CameraPrice</h6>
+                                <a href="#" class="btn btn-outline-light">See Profile</a>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+        </script>
+    </div>
+</div>
+

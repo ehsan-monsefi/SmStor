@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Avashop</title>
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
+              crossorigin="anonymous"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
+    </environment>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand btn btn-outline-secondary fab fa-asymmetrik" asp-area="" asp-controller="Home" asp-action="Index"> AVASHOP</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                Product
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="~/Products/Search">Products</a>
+                                <a class="dropdown-item" href="~/Laptop/Index">Laptop</a>
+                                <a class="dropdown-item" href="~/Camera/Index">Camera</a>
+                                <a class="dropdown-item" href="~/Cellphone/Index">Cellphone</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" data-toggle="modal" data-target="#myModal" asp-area="" asp-controller="" asp-action="Privacy">Sign In | Sign Up</a>
+                            <div class="modal" id="myModal">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Wellcome To AVASHOP!</h4>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+                                        <div class="modal-body a">
+                                            <form action="/" method="post">
+                                                <input type="text" name="Username" placeholder="username" class="form-control" />
+                                                <input type="password" name="password" placeholder="password" class="form-control" />
+                                                <input type="submit" value="Sign In" class="btn btn-success form-control" />
+                                                <a href="~/Adduser/Index" class="btn btn-secondary form-control">Sign Up</a>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div>
+        <main>
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="col-12 foot">
+            <div class="row">
+                <div class="col-4 foot1">
+                    <h3>Help Buy From AVASHOP</h3>
+                    <ul>
+                        <li>
+                            <a href="#" class="btn form-control">How To Place An Order</a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn form-control">Order Submission Procedure</a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn form-control">Cooking Methods</a>
+                        </li>
+                    </ul>                                        
+                </div>
+                <div class="col-4 foot2">
+                    <h3>With AVASHOP</h3>
+                    <ul>
+                        <li>
+                            <a href="~/Home/Index" class="btn form-control">Home</a>
+                        </li>
+                        <li>
+                            <a href="~/Products/Search" class="btn form-control">Products</a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn form-control">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn form-control">Contact Us</a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn form-control">Special Products</a>
+                        </li>
+                    </ul>                                       
+                </div>
+                <div class="col-4 foot3">
+                    <h3>Be With AVASHOP !</h3>
+                    <a href="#" class="btn btn-outline-light fab fa-telegram-plane" data-toggle="tooltip" title="@@AVASHOP"></a>
+                    <a href="#" class="btn btn-outline-light fab fa-facebook-f" data-toggle="tooltip" title="@@AVASHOP.Com"></a>
+                    <a href="#" class="btn btn-outline-light fab fa-whatsapp" data-toggle="tooltip" title="@@AVA_SHOP"></a>
+                    <a href="#" class="btn btn-outline-light fab fa-youtube" data-toggle="tooltip" title="@@A-V-A-SHOP"></a>
+                    <a href="#" class="btn btn-outline-light fab fa-instagram"data-toggle="tooltip" title="@@AVA-SHOP"></a>
+                    <h4>Get The Latest Discounts</h4>
+                    <form class="form-inline" action="" method="post">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Enter Your Email Address">
+                        <button class="btn btn-outline-light" type="submit">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
+        </script>
+    </environment>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

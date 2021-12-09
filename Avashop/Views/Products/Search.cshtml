@@ -1,0 +1,173 @@
+﻿@model PageList<Product>
+@{
+    ViewData["Title"] = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-12">
+    <div class="row">
+        <div class="col-9">
+            <ul class="breadcrumb bg-light">
+                <li class="breadcrumb-item"><a href="~/Home/Index"> AVASHOP</a></li>
+                <li class="breadcrumb-item"><a href="~/Products/Index"> Products</a></li>
+            </ul>
+            <div class="row">
+                <div class="col-12 b">
+                    <i class='fas fa-align-left'> Sorted By :</i>
+                    <a href="#" class="btn btn-secondary btn-sm">Most Visited</a>
+                    <a href="#" class="btn btn-light btn-sm">Best Selling</a>
+                    <a href="#" class="btn btn-light btn-sm">Most Popular</a>
+                    <a href="#" class="btn btn-light btn-sm">The Newest</a>
+                    <a href="#" class="btn btn-light btn-sm">Cheapest</a>
+                    <a href="#" class="btn btn-light btn-sm">Most Expensive</a>
+                </div>
+            </div>
+            <div class="row">
+                @foreach (var Product in Model.Data)
+                {
+                    <div class="col-4 card crd">
+                        <img src="~/@Product.Media[0].PicPath" />
+                        <div class="card-body bg-white">
+                            <h3>@Product.Name</h3>
+                            <hr />
+                            <h6>@Product.Price $</h6>
+                            <p>@Product.Description</p>
+                            <p>@Product.InsertTime</p>
+                            <a href="#" class="btn btn-outline-dark">See Profile</a>
+                        </div>
+                    </div>
+                }                       
+            </div>
+            <div class="row">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item"><a class="page-link" href="#">6</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="row">
+                <div class="col-12 cat">
+                    <img src="../Img/32.jpg" />
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-12 cat1">
+                    <h3>Search Results</h3>
+                    <hr />
+                    <form action="~/Products/Search" method="post">
+                        <input class="form-control mr-sm-2" type="text" name="q" placeholder="Enter Your Product Name">
+                    </form>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-12 cat5">
+                    <img src="../Img/3.jpg" />
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-12 cat2">
+                    <h3>Brand</h3>
+                    <hr />
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search For A Brand Name">
+                    <div class="form-check cat2a">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="">Laptop
+                        </label>
+                    </div>
+                    <div class="form-check cat2a">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="">Camera
+                        </label>
+                    </div>
+                    <div class="form-check cat2a">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="">Cellphone
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 cat5">
+                    <img src="../Img/5.jpg" />
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-12 cat4">
+                    <form action="/action_page.php">
+                        <a href="~/Products/Index" class="btn form-control">Laptops And Ultrabooks</a>
+                        <br />
+                        <a href="#" class="btn form-control">Laptop Accessories</a>
+                        <br />
+                        <a href="#" class="btn form-control">Photo Camera</a>
+                        <br />
+                        <a href="#" class="btn form-control">Movie Camera</a>
+                        <br />
+                        <a href="#" class="btn form-control">Cellphone</a>
+                        <br />
+                        <a href="#" class="btn form-control"><i class="fas fa-plus-square"> More Items</i></a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="hm3">
+    <h1>Special Product</h1>
+    <hr />
+    <div class="prsss">
+        <meta charset="utf-8" />
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+        <link rel="stylesheet"
+              href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    @foreach (var Product in Model.Data)
+                    {
+                        <div class="swiper-slide">
+                            <img src="~/@Product.Media[0].PicPath" />
+                            <div class="card-img-overlay ssss">
+                                <h4 class="card-title">@Product.Name</h4>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <p class="card-text">@Product.Description</p>
+                                <h6 class="card-text">@Product.Price</h6>
+                                <a href="#" class="btn btn-outline-light">See Profile</a>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+        </script>
+    </div>
+</div>
+
+

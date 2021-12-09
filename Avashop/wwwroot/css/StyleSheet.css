@@ -1,0 +1,433 @@
+﻿*{
+    font-family:Andalus;
+}
+body {
+    background: linear-gradient(To left, #333, #333);
+}
+.swiper {
+    width: 100%;
+    height: 350px;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    margin: 0 0 0 0;
+}
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius:5px;
+}
+.a input{
+    text-align:center;
+    margin:10px 0 0 0;
+}
+.a a{
+    text-align:center;
+    margin:10px 0 0 0;
+}
+.frm{
+    height:900px;
+    background-size:cover;
+    margin:10px 0 0 0;
+}
+.frm h4{
+    text-align:center;
+    color:snow;
+}
+.frm1 {
+    background: url(../Img/18.jpg);
+    height:850px;
+}
+.frm1 input {    
+    margin: 5px 0 0 0;
+    text-align:center;
+}
+.frm label{
+    color:aqua;
+}
+.frm1 label{
+    color:aqua;
+}
+/*HOME CSS 888888888888888888888888888888888888888888888888*/
+.hm1{
+    width:100%;
+    height:550px;
+}
+.hm1 h3{
+    color:snow;
+}
+.tk{
+    width:100%;
+    height:550px;
+    background:linear-gradient(To left, #333, #333);
+}
+.tk1 img{
+    width:100%;
+    height:150px;
+    margin:5px 0 0 0;
+    padding:5px;
+    border:1px dashed gray;
+    border-radius:10px;
+}
+.tk2 h3{
+    text-align:center;
+    color:#aaa;
+}
+.tk2 h6{
+    color:tomato;
+}
+.tk2 p {
+    color: snow;
+}
+.frm{
+    height:550px;
+    background-size:cover;
+    margin:10px 0 0 0;
+}
+.frm h4{
+    text-align:center;
+    color:snow;
+}
+.frm1 {
+    height: 500px;
+    background: url(../Img/6.jpg);
+}
+.frm1 input {    
+    margin: 15px 0 0 0;
+    text-align:center;
+}
+.hm3 {
+    width: 100%;
+    height: 600px;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(../Img/18.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.hm3 h1{
+    text-align:center;
+    margin:15px 0 0 0;
+    color:snow;
+}
+.hm3 h4{
+    text-align:center;
+    color:snow;
+    margin:15px 0 0 0;
+}
+.hm3 h6{
+    text-align:center;
+    color:tomato;
+    margin:15px 0 0 0;
+}
+.hm3 p{
+    text-align:center;
+    color:snow;
+    margin:15px 0 0 0;
+}
+.hm3 a{
+    margin:50px 0 0 0;
+}
+.hm4 {
+    width: 100%;
+    height: 600px;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(../Img/14.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.sdd {
+    width: 100%;
+    height: 500px;
+}
+.checked{
+    color:orangered;
+}
+.sdd img {
+    border-radius: 30%;
+    width: 100%;
+    height: 250px;
+    margin: 20px 0 0 0;
+}
+.sdd h3{
+    text-align:center;
+    color:#999;
+    margin:10px 0 0 0;
+    border-bottom: 1px dashed snow;
+}
+.sdd h5{
+    text-align:left;
+    color:snow;
+    margin:10px 0 0 0;
+}
+.sdd h6{
+    text-align:left;
+    color:snow;
+    margin:10px 0 0 0;
+}
+.sdd p{
+    text-align:left;
+    color:snow;
+    margin:15px 0 0 0;
+}
+.sdd a{
+    margin:15px 0 0 0;
+}
+.frmm{
+    height:800px;
+    margin:10px 0 0 0;
+}
+.frmm h4{
+    text-align:center;
+    color:snow;
+}
+.frmm1 {
+    height: 750px;
+    background: url(../Img/6.jpg);
+    background-size: cover;
+}
+.frmm1 input {    
+    text-align:center;
+}
+.frmm1 label{
+    color:aqua;
+}
+.crd:hover {
+    box-shadow: 1px 1px 2px black, 0 0 25px gray, 0 0 5px darkgray
+}
+.crd img {
+    width: 100%;
+    height: 200px;
+    margin:15px 0 0 0;
+}
+.crd h3{
+    text-align:center;
+    color:dimgrey;
+}
+.crd h6{
+    color:tomato;
+    margin:10px 0 10px 0;
+    text-align:center;
+}
+.crd h5{
+    text-align:center;
+}
+.crd span{
+    margin:0 0 0 0;
+}
+.checked{
+    color:orange;
+}
+.crd p{
+    color:black;
+}
+.pagination{
+    margin:15px 0 15px 0;
+}
+.breadcrumb a {
+    color: #333;
+}
+.breadcrumb a:hover {
+    color: orangered;
+    text-decoration:none;
+}
+.b{
+    width:100%;
+    height:50px;
+    background-color:#fff;
+}
+.b a{
+    margin:0 0 0 5px;
+}
+.b i{
+    color:dimgrey;
+    margin:10px 0 0 0;
+}
+.cat{
+    width:100%;
+    height:100px;
+}
+.cat img{
+    width:100%;
+    height:100px;
+    margin:0 0 15px 0;
+}
+.cat1{
+    width:100%;
+    height:150px;
+}
+.cat1 h3{
+    text-align:center;
+    color:snow;
+}
+.cat1 input{
+    margin:15px 0 0 0;
+}
+.cat2 {
+    width: 100%;
+    height: 250px;
+}
+.cat2 h3{
+    text-align:center;
+    color:snow;
+}
+.cat2a{
+    margin:15px 0 0 0;
+}
+.cat2a label{
+    color:snow;
+}
+.cat4 a{
+    color:snow;
+    text-align:left;
+}
+.cat4 a:hover{
+    color:orangered;
+}
+.cat5{
+    width:100%;
+    height:200px;
+}
+.cat5 img{
+    width:100%;
+    height:200px;
+    margin:0 0 15px 0;
+    border:1px inset snow;
+    padding:5px;
+}
+.cat2L {
+    width: 100%;
+    height: 450px;
+}
+.cat2L h3{
+    text-align:center;
+    color:snow;
+}
+.kol{
+    margin:50px 0 0 0;
+}
+.cat4L{
+    height:450px;
+}
+.cat4L a{
+    color:snow;
+    text-align:left;
+}
+.cat4L a:hover{
+    color:orangered;
+}
+/*ADMIN CSS 888888888888888888888888888888888888888888888888*/
+.adm {
+    width: 100%;
+    height: 610px;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(../Img/14.jpg);
+    background-size: cover;
+    margin: 15px 0 0 0;
+}
+.adm ul{
+    margin:10px 0 0 -45px;
+}
+.adm ul li{
+    list-style-type:none;
+    margin:40px 0 0 0;
+}
+.adm1{
+    margin:15px 0 0 0;
+}
+.prg1 {
+    margin:15px 0 0 0;
+}
+/*FOOTER CSS 888888888888888888888888888888888888888888888888*/
+.foot{
+    width: 100%;
+    height: 400px;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(../Img/44.jpg);
+    background-size: cover;
+}
+.foot3{
+    height:390px;
+}
+.foot3 h3{
+    padding:15px 0 15px 0;
+    text-align:center;
+    color:snow;
+    border-bottom:1px dashed snow;
+}
+.foot3 a{
+    margin:0 0 0 15px;
+}
+.foot3 form{
+    margin:45px 0 0 0;
+}
+.foot3 h4{
+    margin:25px 0 15px 0;
+    text-align:center;
+    color:snow;
+    
+}
+.foot2{
+    height:390px;
+}
+.foot2 h3{
+    padding:15px 0 15px 0;
+    text-align:center;
+    color:snow;
+    border-bottom:1px dashed snow;
+}
+.foot2 a{
+    margin:5px 0 0 0;
+    color:snow;
+    text-align:left;
+}
+.foot2 a:hover{
+    color:orangered;
+}
+.foot2 form{
+    margin:45px 0 0 0;
+}
+.foot2 h4{
+    margin:25px 0 15px 0;
+    text-align:center;
+    color:snow;
+    
+}
+.foot1{
+    height:390px;
+}
+.foot1 h3{
+    padding:15px 0 15px 0;
+    text-align:center;
+    color:snow;
+    border-bottom:1px dashed snow;
+}
+.foot1 a{
+    margin:5px 0 0 0;
+    color:snow;
+    text-align:left;
+}
+.foot1 a:hover{
+    color:orangered;
+}
+.foot1 form{
+    margin:45px 0 0 0;
+}
+.foot1 h4{
+    margin:25px 0 15px 0;
+    text-align:center;
+    color:snow;
+    
+}

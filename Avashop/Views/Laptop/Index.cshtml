@@ -1,0 +1,238 @@
+﻿@model PageList<Laptop>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-12 kol">
+    <div class="row">
+        <div class="col-9">
+            <ul class="breadcrumb bg-light">
+                <li class="breadcrumb-item"><a href="~/Home/Index"> AVASHOP</a></li>
+                <li class="breadcrumb-item"><a href="~/Products/Index"> Products</a></li>
+                <li class="breadcrumb-item"><a href="~/Laptop/Index"> Laptops</a></li>
+            </ul>
+            <div class="row">
+                <div class="col-12 b">
+                    <i class='fas fa-align-left'> Sorted By :</i>
+                    <a href="#" class="btn btn-secondary btn-sm">Most Visited</a>
+                    <a href="#" class="btn btn-light btn-sm">Best Selling</a>
+                    <a href="#" class="btn btn-light btn-sm">Most Popular</a>
+                    <a href="#" class="btn btn-light btn-sm">The Newest</a>
+                    <a href="#" class="btn btn-light btn-sm">Cheapest</a>
+                    <a href="#" class="btn btn-light btn-sm">Most Expensive</a>
+                </div>
+            </div>
+            <div class="row">
+                @foreach (var Laptop in Model.Data)
+                {
+                    <div class="col-4 card crd">
+                        <img src="~/@Laptop.LaptopMedia[0].LaptopPicPath" />
+                        <div class="card-body bg-white">
+                            <h3>@Laptop.LaptopName</h3>
+                            <hr />
+                            <h6>@Laptop.LaptopPrice $</h6>
+                            <p>@Laptop.LaptopDescription</p>
+                            <p>@Laptop.LaptopInsertTime</p>
+                            <a href="#" class="btn btn-outline-dark">See Profile</a>
+                        </div>
+                    </div>
+                }                                
+            </div>
+            <div class="row">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item"><a class="page-link" href="#">6</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="row">
+                <div class="col-12 cat">
+                    <img src="../Img/32.jpg" />
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-12 cat1">
+                    <h3>Search Results</h3>
+                    <hr />
+                    <form action="~/Laptop/Index" method="post">
+                        <input class="form-control mr-sm-2" type="text" name="q" placeholder="Enter Your Laptop Name">
+                    </form>                    
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-12 cat5">
+                    <img src="../Img/33.jpg" />
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-12 cat2L">
+                    <h3>Brand</h3>
+                    <hr />
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search For A Brand Name">
+                    <div class="form-check cat2a">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="">Asus
+                        </label>
+                    </div>
+                    <div class="form-check cat2a">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="">Hp
+                        </label>
+                    </div>
+                    <div class="form-check cat2a">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="">Lenovo
+                        </label>
+                    </div>
+                    <div class="form-check cat2a">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="">Dell
+                        </label>
+                    </div>
+                    <div class="form-check cat2a">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="">Acer
+                        </label>
+                    </div>
+                    <div class="form-check cat2a">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="">Apple
+                        </label>
+                    </div>
+                    <div class="form-check cat2a">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="">Razer
+                        </label>
+                    </div>
+                    <div class="form-check cat2a">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="">Tsco
+                        </label>
+                    </div>
+                    <div class="form-check cat2a">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="">Toshiba
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-12 cat4L">
+                    <form action="/action_page.php">
+                        <div class="form-group">
+                            <select class="form-control" id="sel1" name="sellist1">
+                                <option>Screen Size</option>
+                                <option>19 Inches</option>
+                                <option>17 Inches</option>
+                                <option>14 Inches</option>
+                                <option>15 Inches</option>
+                                <option>20 Inches</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" id="sel1" name="sellist1">
+                                <option>Internal Memory</option>
+                                <option>256</option>
+                                <option>512</option>
+                                <option>1T</option>
+                                <option>2T</option>
+                                <option>4T</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" id="sel1" name="sellist1">
+                                <option>Colors</option>
+                                <option>Black</option>
+                                <option>Silver</option>
+                                <option>Blue</option>
+                                <option>Gray</option>
+                                <option>Red</option>
+                                <option>Yellow</option>
+                                <option>Gold</option>
+                                <option>White</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" id="sel1" name="sellist1">
+                                <option>Type</option>
+                                <option>Ios</option>
+                                <option>Mac</option>
+                                <option>Android</option>
+                                <option>Windows</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" id="sel1" name="sellist1">
+                                <option>The Amount Of Ram</option>
+                                <option>6</option>
+                                <option>4</option>
+                                <option>8</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-outline-light">Apply Filter</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="hm3">
+    <h1>Special Product</h1>
+    <hr />
+    <div class="prsss">
+        <meta charset="utf-8" />
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+        <link rel="stylesheet"
+              href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    @foreach (var Laptop in Model.Data)
+                    {
+                        <div class="swiper-slide">
+                            <img src="~/@Laptop.LaptopMedia[0].LaptopPicPath" />
+                            <div class="card-img-overlay ssss">
+                                <h4 class="card-title">@Laptop.LaptopName</h4>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <p class="card-text">@Laptop.LaptopDescription</p>
+                                <h6 class="card-text">@Laptop.LaptopPrice</h6>
+                                <a href="#" class="btn btn-outline-light">See Profile</a>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+        </script>
+    </div>
+</div>
+

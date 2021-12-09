@@ -1,0 +1,161 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-12 card bg-dark">
+    <div class="row">
+        <div class="col-6">
+            <table class="table bg-light table-striped">
+                <thead>
+                    <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>john@example.com</td>
+                        <td>
+                            <a href="#" class="btn btn-info btn-sm fas fa-edit "></a> |
+                            <a href="#" class="btn btn-danger btn-sm fas fa-trash-alt"></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mary</td>
+                        <td>Moe</td>
+                        <td>mary@example.com</td>
+                        <td>
+                            <a href="#" class="btn btn-info btn-sm fas fa-edit "></a> |
+                            <a href="#" class="btn btn-danger btn-sm fas fa-trash-alt"></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>July</td>
+                        <td>Dooley</td>
+                        <td>july@example.com</td>
+                        <td>
+                            <a href="#" class="btn btn-info btn-sm fas fa-edit "></a> |
+                            <a href="#" class="btn btn-danger btn-sm fas fa-trash-alt"></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-6">
+            <table class="table bg-info table-striped">
+                <thead>
+                    <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>john@example.com</td>
+                        <td>
+                            <a href="#" class="btn btn-primary btn-sm fas fa-edit "></a> |
+                            <a href="#" class="btn btn-danger btn-sm fas fa-trash-alt"></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mary</td>
+                        <td>Moe</td>
+                        <td>mary@example.com</td>
+                        <td>
+                            <a href="#" class="btn btn-primary btn-sm fas fa-edit "></a> |
+                            <a href="#" class="btn btn-danger btn-sm fas fa-trash-alt"></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>July</td>
+                        <td>Dooley</td>
+                        <td>july@example.com</td>
+                        <td>
+                            <a href="#" class="btn btn-primary btn-sm fas fa-edit "></a> |
+                            <a href="#" class="btn btn-danger btn-sm fas fa-trash-alt"></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="col-12 card bg-dark">
+    <div class="row">
+        <div class="col-6">
+            <script type="text/javascript">
+                window.onload = function () {
+
+                    var chart = new CanvasJS.Chart("chartContainer", {
+                        theme: "light1", // "light2", "dark1", "dark2"
+                        animationEnabled: false, // change to true
+                        title: {
+                            text: "Basic Column Chart"
+                        },
+                        data: [
+                            {
+                                // Change type to "bar", "area", "spline", "pie",etc.
+                                type: "column",
+                                dataPoints: [
+                                    { label: "apple", y: 10 },
+                                    { label: "orange", y: 15 },
+                                    { label: "banana", y: 25 },
+                                    { label: "mango", y: 30 },
+                                    { label: "grape", y: 28 }
+                                ]
+                            }
+                        ]
+                    });
+                    chart.render();
+
+                }
+            </script>
+            <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+            <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+        </div>
+        <div class="col-6 prg">
+            <div class="progress prg1">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:90%">90%</div>
+            </div>
+            <br />
+            <div class="progress">
+                <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" style="width:60%">60%</div>
+            </div>
+            <br />
+            <div class="progress">
+                <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" style="width:80%">80%</div>
+            </div>
+            <br />
+            <div class="progress">
+                <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width:55%">55%</div>
+            </div>
+            <br />
+            <div class="progress">
+                <div class="progress-bar bg-info progress-bar-striped progress-bar-animated" style="width:40%">40%</div>
+            </div>
+            <br />
+            <div class="progress">
+                <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" style="width:60%">60%</div>
+            </div>
+            <br />
+            <div class="progress">
+                <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" style="width:80%">80%</div>
+            </div>
+            <br />
+            <div class="progress">
+                <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width:55%">55%</div>
+            </div>
+            <br />
+            <div class="progress">
+                <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" style="width:95%">95%</div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,143 @@
+﻿@model List<Product>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="col-12">
+    <div class="row">
+        <div class="col-8 hm1">
+            <div id="demo" class="carousel slide" data-ride="carousel">
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                </ul>
+                <div class="carousel-inner">
+                    @{
+                        int a = 0;
+                        foreach (var item in Model.Skip(4).Take(3))
+                        {
+                            if (a == 0)
+                            {
+                                <div class="carousel-item active">
+                                    <img src="@item.Media[0].PicPath" style="width:100%; height:530px;">
+                                    <div class="carousel-caption">
+                                        <h3>@item.Name</h3>
+                                        <a href="#" class="btn btn-outline-light">Read More</a>
+                                    </div>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="carousel-item">
+                                    <img src="@item.Media[0].PicPath" style="width:100%; height:530px;">
+                                    <div class="carousel-caption">
+                                        <h3>@item.Name</h3>
+                                        <a href="#" class="btn btn-outline-light">Read More</a>
+                                    </div>
+                                </div>
+                            }
+                            a++;
+                        }
+                    }
+                </div>
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </div>
+        <div class="col-4 hm2">
+            @foreach (var item in Model.Take(3))
+            {
+                <div class="row">
+                    <div class="col-6 tk1">
+                        <img src="@item.Media[0].PicPath" />
+                    </div>
+                    <div class="col-6 tk2">
+                        <h3>@item.Name</h3>
+                        <h6>@item.Price $</h6>
+                        <p>
+                            @item.Description
+                        </p>
+                        <a href="#" class="btn btn-outline-light">Read More</a>
+                    </div>
+                </div>
+                <hr />
+            }
+        </div>
+    </div>
+</div>
+
+<div class="hm3">
+    <h1>Special Product</h1>
+    <hr />
+    <div class="prsss">
+        <meta charset="utf-8" />
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+        <link rel="stylesheet"
+              href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    @foreach (var item in Model)
+                    {
+                        <div class="swiper-slide">
+                            <img src="@item.Media[0].PicPath" />
+                            <div class="card-img-overlay ssss">
+                                <h4 class="card-title">@item.Name</h4>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <p class="card-text">@item.Description</p>
+                                <h6 class="card-text">@item.Price</h6>
+                                <a href="#" class="btn btn-outline-light">See Profile</a>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+        </script>
+    </div>
+</div>
+<div class="col-12 hm4">
+    <div class="row">
+        @foreach (var item in Model.Skip(4).Take(4))
+        {
+            <div class="col-3 sdd">
+                <img src="@item.Media[0].PicPath" />
+                <h3>@item.Name</h3>
+                <p> @item.Description</p>
+                <h6>@item.Price</h6>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <h5>@item.InsertTime</h5>
+                <a href="#" class="btn btn-outline-light">Read More</a>
+            </div>
+        }
+    </div>
+</div>
