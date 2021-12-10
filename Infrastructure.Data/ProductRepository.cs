@@ -27,7 +27,7 @@ namespace Infrastructure.Data
 
         public (List<Product>, int Count) GetFilterProducts(string search, string category, int pageNumber, int PageSize)
         {
-            IQueryable<Product> query = context.Products.Include(a => a.Media);
+            IQueryable<Product> query = context.Products.Include(a => a.Media).Include(a=>a.Category);
             if (!string.IsNullOrEmpty(search))
             {
                 query = query.Where(a => a.Name.Contains(search) || a.Description.Contains(search));

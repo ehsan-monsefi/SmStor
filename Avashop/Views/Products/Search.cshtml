@@ -28,8 +28,9 @@
                     <div class="col-4 card crd">
                         <img src="~/@Product.Media[0].PicPath" />
                         <div class="card-body bg-white">
-                            <h3>@Product.Name</h3>
+                            <h3>@Product.Category.CategoryName</h3>
                             <hr />
+                            <p>@Product.Name</p>
                             <h6>@Product.Price $</h6>
                             <p>@Product.Description</p>
                             <p>@Product.InsertTime</p>
@@ -76,23 +77,23 @@
             <hr />
             <div class="row">
                 <div class="col-12 cat2">
-                    <h3>Brand</h3>
+                    <h3>Category</h3>
                     <hr />
                     <form action="~/Products/Search" method="post">
                         
                         <div class="form-check cat2a">
                             <label class="form-check-label">
-                                <input type="checkbox" class="form-check-input" name="q" value="Acer">Acer
+                                <input type="checkbox" class="form-check-input" name="category" value="Laptop">Laptop
                             </label>
                         </div>
                         <div class="form-check cat2a">
                             <label class="form-check-label">
-                                <input type="checkbox" class="form-check-input" name="q" value="Samsung">Samsung
+                                <input type="checkbox" class="form-check-input" name="category" value="Camera">Camera
                             </label>
                         </div>
                         <div class="form-check cat2a">
                             <label class="form-check-label">
-                                <input type="checkbox" class="form-check-input" name="q" value="Cellphone">Xiaomi
+                                <input type="checkbox" class="form-check-input" name="category" value="Cellphone">Cellphone
                             </label>
                         </div>
                         <br />
