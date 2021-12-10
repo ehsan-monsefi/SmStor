@@ -79,133 +79,73 @@
                 <div class="col-12 cat2L">
                     <h3>Brand</h3>
                     <hr />
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search For A Brand Name">
-                    <div class="form-check cat2a">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Samsung
-                        </label>
-                    </div>
-                    <div class="form-check cat2a">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Apple
-                        </label>
-                    </div>
-                    <div class="form-check cat2a">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Nokia
-                        </label>
-                    </div>
-                    <div class="form-check cat2a">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Lg
-                        </label>
-                    </div>
-                    <div class="form-check cat2a">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Xiaomi
-                        </label>
-                    </div>
-                    <div class="form-check cat2a">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Huawei
-                        </label>
-                    </div>
-                    <div class="form-check cat2a">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Orod
-                        </label>
-                    </div>
-                    <div class="form-check cat2a">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Cat
-                        </label>
-                    </div>
-                    <div class="form-check cat2a">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Htc
-                        </label>
-                    </div>
+                    <form action="~/Cellphone/Index" method="post">
+                        <div class="form-check cat2a">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="q" value="Samsung">Samsung
+                            </label>
+                        </div>
+                        <div class="form-check cat2a">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="q" value="Apple">Apple
+                            </label>
+                        </div>
+                        <div class="form-check cat2a">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="q" value="Nokia">Nokia
+                            </label>
+                        </div>
+                        <div class="form-check cat2a">
+                            <label class="form-check-label"> 
+                                <input type="checkbox" class="form-check-input" name="q" value="Lg">Lg
+                            </label>
+                        </div>
+                        <div class="form-check cat2a">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="q" value="Xiaomi">Xiaomi
+                            </label>
+                        </div>
+                        <div class="form-check cat2a">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="q" value="Huawei">Huawei
+                            </label>
+                        </div>
+                        <div class="form-check cat2a">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="q" value="Orod">Orod
+                            </label>
+                        </div>
+                        <div class="form-check cat2a">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="q" value="Cat">Cat
+                            </label>
+                        </div>
+                        <div class="form-check cat2a">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="q" value="Htc">Htc
+                            </label>
+                        </div>
+                        <br />
+                        <input type="submit" class="btn btn-outline-light" name="q" value="Apply Filter" />
+                    </form>
                 </div>
             </div>
             <hr />
             <div class="row">
                 <div class="col-12 cat4L">
-                    <form action="/action_page.php">
+                    <form action="~/Cellphone/Index" method="post">
                         <div class="form-group">
-                            <select class="form-control" id="sel1" name="sellist1">
-                                <option>Communication Networks</option>
-                                <option>2G</option>
-                                <option>3G</option>
-                                <option>4G</option>
-                                <option>5G</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <select class="form-control" id="sel1" name="sellist1">
-                                <option>Cameras On The Back Of The Phone</option>
-                                <option>1 Camera Module</option>
-                                <option>2 Camera Module</option>
-                                <option>3 Camera Module</option>
-                                <option>4 Camera Module</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <select class="form-control" id="sel1" name="sellist1">
-                                <option>Memory Card Support</option>
-                                <option>Micro SD</option>
-                                <option>No Memory Card Support</option>
-                                <option>Memory StickMicro-M2</option>
-                                <option>Nano Memory </option>
-                                <option>Mini SD</option>
-                                <option>SD</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <select class="form-control" id="sel1" name="sellist1">
-                                <option>Number Of Sim Cards</option>
-                                <option>1 Number</option>
-                                <option>2 Number</option>
-                                <option>3 Number</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <select class="form-control" id="sel1" name="sellist1">
-                                <option>The Amount Of Ram</option>
-                                <option>1 Gig</option>
-                                <option>4 Gig</option>
-                                <option>8 Gig</option>
-                                <option>2 Gig</option>
-                                <option>16 Gig</option>
-                                <option>32 Gig</option>
-                                <option>64 Gig</option>
-                                <option>128 Gig</option>
-                                <option>256 Gig</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <select class="form-control" id="sel1" name="sellist1">
-                                <option>Colors</option>
-                                <option>Black</option>
-                                <option>Silver</option>
-                                <option>Blue</option>
-                                <option>Gray</option>
-                                <option>Red</option>
-                                <option>Yellow</option>
-                                <option>Green</option>
-                                <option>Gold</option>
-                                <option>Purple</option>
-                                <option>White</option>
-                                <option>Orange</option>
-                                <option>Bronze</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <select class="form-control" id="sel1" name="sellist1">
-                                <option>Type</option>
-                                <option>Android Operating System</option>
-                                <option>IOS Operating System</option>
-                                <option>Other Operating System</option>
-                                <option>WindowsPhone Operating System</option>
+                            <select class="form-control" id="sel1" name="q">
+                                <option>Brands</option>
+                                <option>Samsung</option>
+                                <option>Apple</option>
+                                <option>Nokia</option>
+                                <option>Lg</option>
+                                <option>Xiaomi</option>
+                                <option>Huawei</option>
+                                <option>Orod</option>
+                                <option>Cat</option>
+                                <option>Htc</option>
                             </select>
                         </div>
                         <button type="submit" class="btn btn-outline-light">Apply Filter</button>

@@ -79,98 +79,73 @@
                 <div class="col-12 cat2L">
                     <h3>Brand</h3>
                     <hr />
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search For A Brand Name">
-                    <div class="form-check cat2a">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Canon
-                        </label>
-                    </div>
-                    <div class="form-check cat2a">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Nikon
-                        </label>
-                    </div>
-                    <div class="form-check cat2a">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Fujifilm
-                        </label>
-                    </div>
-                    <div class="form-check cat2a">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Lumix
-                        </label>
-                    </div>
-                    <div class="form-check cat2a">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Panasonic
-                        </label>
-                    </div>
-                    <div class="form-check cat2a">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Sony
-                        </label>
-                    </div>
-                    <div class="form-check cat2a">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Toshiba
-                        </label>
-                    </div>
-                    <div class="form-check cat2a">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Instax
-                        </label>
-                    </div>
-                    <div class="form-check cat2a">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Brinno
-                        </label>
-                    </div>
-                </div>
+                    <form action="~/Camera/Index" method="post">
+                        <div class="form-check cat2a">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="q" value="Canon">Canon
+                            </label>
+                        </div>
+                        <div class="form-check cat2a">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="q" value="Nikon">Nikon
+                            </label>
+                        </div>
+                        <div class="form-check cat2a">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="q" value="Fujifilm">Fujifilm
+                            </label>
+                        </div>
+                        <div class="form-check cat2a">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="q" value="Lumix">Lumix
+                            </label>
+                        </div>
+                        <div class="form-check cat2a">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="q" value="Panasonic">Panasonic
+                            </label>
+                        </div>
+                        <div class="form-check cat2a">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="q" value="Sony">Sony
+                            </label>
+                        </div>
+                        <div class="form-check cat2a">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="q" value="Toshiba">Toshiba
+                            </label>
+                        </div>
+                        <div class="form-check cat2a">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="q" value="Instax">Instax
+                            </label>
+                        </div>
+                        <div class="form-check cat2a">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="q" value="Brinno">Brinno
+                            </label>
+                        </div>
+                        <br />
+                        <input type="submit" class="btn btn-outline-light" value="Apply Filter" />
+                    </form>
+                </div>    
             </div>
             <hr />
             <div class="row">
                 <div class="col-12 cat4L">
-                    <form action="/action_page.php">
+                    <form action="~/Camera/Index" method="post">
                         <div class="form-group">
-                            <select class="form-control" id="sel1" name="sellist1">
-                                <option>Memory Card Support</option>
-                                <option>Micro SD</option>
-                                <option>No Memory Card Support</option>
-                                <option>Memory StickMicro-M2</option>
-                                <option>Nano Memory </option>
-                                <option>Mini SD</option>
-                                <option>SD</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <select class="form-control" id="sel1" name="sellist1">
-                                <option>The Amount Of Ram</option>
-                                <option>1 Gig</option>
-                                <option>4 Gig</option>
-                                <option>8 Gig</option>
-                                <option>2 Gig</option>
-                                <option>16 Gig</option>
-                                <option>32 Gig</option>
-                                <option>64 Gig</option>
-                                <option>128 Gig</option>
-                                <option>256 Gig</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <select class="form-control" id="sel1" name="sellist1">
-                                <option>Colors</option>
-                                <option>Black</option>
-                                <option>Silver</option>
-                                <option>Blue</option>
-                                <option>Gray</option>
-                                <option>Red</option>
-                                <option>Yellow</option>
-                                <option>Green</option>
-                                <option>Gold</option>
-                                <option>Purple</option>
-                                <option>White</option>
-                                <option>Orange</option>
-                                <option>Bronze</option>
+                            <select class="form-control" id="sel1" name="q">
+                                <option>Brands</option>
+                                <option>Canon</option>
+                                <option>Nikon</option>
+                                <option>Fujifilm</option>
+                                <option>Lumix</option>
+                                <option>Panasonic</option>
+                                <option>Sony</option>
+                                <option>Toshiba</option>
+                                <option>Instax</option>
+                                <option>Brinno</option>
                             </select>
                         </div>
                         <button type="submit" class="btn btn-outline-light">Apply Filter</button>
