@@ -77,68 +77,69 @@
             <hr />
             <div class="row">
                 <div class="col-12 cat2L">
-                    <h3>Brand</h3>
+                    <h3>Brand</h3>                                        
                     <hr />
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search For A Brand Name">
-                    <div class="form-check cat2a">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Asus
-                        </label>
-                    </div>
-                    <div class="form-check cat2a">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Hp
-                        </label>
-                    </div>
-                    <div class="form-check cat2a">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Lenovo
-                        </label>
-                    </div>
-                    <div class="form-check cat2a">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Dell
-                        </label>
-                    </div>
-                    <div class="form-check cat2a">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Acer
-                        </label>
-                    </div>
-                    <div class="form-check cat2a">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Apple
-                        </label>
-                    </div>
-                    <div class="form-check cat2a">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Razer
-                        </label>
-                    </div>
-                    <div class="form-check cat2a">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Tsco
-                        </label>
-                    </div>
-                    <div class="form-check cat2a">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Toshiba
-                        </label>
-                    </div>
+                    <form action="~/Laptop/Index" method="post">
+                        <div class="form-check cat2a">
+                            <label class="form-check-label">
+                                <input type="checkbox" name="q" class="form-check-input cat2a" value="Asus">Asus
+                            </label>
+                        </div>
+                        <div class="form-check cat2a">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="q" value="Hp">Hp
+                            </label>
+                        </div>
+                        <div class="form-check cat2a">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="q" value="Lenovo">Lenovo
+                            </label>
+                        </div>
+                        <div class="form-check cat2a">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="q" value="Dell">Dell
+                            </label>
+                        </div>
+                        <div class="form-check cat2a">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="q" value="Acer">Acer
+                            </label>
+                        </div>
+                        <div class="form-check cat2a">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="q" value="Apple">Apple
+                            </label>
+                        </div>
+                        <div class="form-check cat2a">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="q" value="Razer">Razer
+                            </label>
+                        </div>
+                        <div class="form-check cat2a">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="q" value="Tsco">Tsco
+                            </label>
+                        </div>
+                        <div class="form-check cat2a">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="q" value="Toshiba">Toshiba
+                            </label>
+                        </div>
+                        <br />
+                        <input type="submit" class="btn btn-outline-light" value="Apply" />
+                    </form>
                 </div>
             </div>
             <hr />
             <div class="row">
                 <div class="col-12 cat4L">
-                    <form action="/action_page.php">
+                    <form action="~/Laptop/Index" method="post">
                         <div class="form-group">
-                            <select class="form-control" id="sel1" name="sellist1">
-                                <option>Screen Size</option>
-                                <option>19 Inches</option>
-                                <option>17 Inches</option>
-                                <option>14 Inches</option>
-                                <option>15 Inches</option>
-                                <option>20 Inches</option>
+                            <select class="form-control" id="sel1" name="q">
+                                <option>Brand</option>
+                                <option>Dell</option>
+                                <option>Acer</option>
+                                <option>Lenovo</option>
                             </select>
                         </div>
                         <div class="form-group">

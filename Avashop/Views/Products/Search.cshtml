@@ -9,7 +9,7 @@
         <div class="col-9">
             <ul class="breadcrumb bg-light">
                 <li class="breadcrumb-item"><a href="~/Home/Index"> AVASHOP</a></li>
-                <li class="breadcrumb-item"><a href="~/Products/Index"> Products</a></li>
+                <li class="breadcrumb-item"><a href="~/Products/Search"> Products</a></li>
             </ul>
             <div class="row">
                 <div class="col-12 b">
@@ -78,22 +78,26 @@
                 <div class="col-12 cat2">
                     <h3>Brand</h3>
                     <hr />
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search For A Brand Name">
-                    <div class="form-check cat2a">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Laptop
-                        </label>
-                    </div>
-                    <div class="form-check cat2a">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Camera
-                        </label>
-                    </div>
-                    <div class="form-check cat2a">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Cellphone
-                        </label>
-                    </div>
+                    <form action="~/Products/Search" method="post">
+                        
+                        <div class="form-check cat2a">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="q" value="Acer">Acer
+                            </label>
+                        </div>
+                        <div class="form-check cat2a">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="q" value="Samsung">Samsung
+                            </label>
+                        </div>
+                        <div class="form-check cat2a">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="q" value="Cellphone">Cellphone
+                            </label>
+                        </div>
+                        <br />
+                        <input type="submit" class="btn btn-outline-light"  value="ssss" />
+                    </form>
                 </div>
             </div>
             <div class="row">
@@ -104,8 +108,8 @@
             <hr />
             <div class="row">
                 <div class="col-12 cat4">
-                    <form action="/action_page.php">
-                        <a href="~/Products/Index" class="btn form-control">Laptops And Ultrabooks</a>
+                    <form action="#" method="post">
+                        <a href="#" class="btn form-control">Laptops And Ultrabooks</a>
                         <br />
                         <a href="#" class="btn form-control">Laptop Accessories</a>
                         <br />
@@ -115,7 +119,7 @@
                         <br />
                         <a href="#" class="btn form-control">Cellphone</a>
                         <br />
-                        <a href="#" class="btn form-control"><i class="fas fa-plus-square"> More Items</i></a>
+                        <a href="#" class="btn form-control"><i class="fas fa-plus-square"> More Items</i></a>                        
                     </form>
                 </div>
             </div>
